@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-waffle");
+
 
 const dotenv = require("dotenv");
 
@@ -18,11 +18,11 @@ module.exports = {
   solidity: "0.8.9",
   networks: {
     rinkeby: {
-      url: process.env.RINKEBY_RPC_URL,
-      accounts: [process.env.PRIVATE_KEY]
+      url: process.env.REACT_APP_RINKEBY_RPC_URL,
+      accounts: [process.env.REACT_APP_PRIVATE_KEY]
     },
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_KEY,
+    apiKey: process.env.REACT_APP_ETHERSCAN_KEY,
   },
 };
